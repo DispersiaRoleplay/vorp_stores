@@ -1,3 +1,19 @@
+# 🚀 vorp_stores V2 (Community Edition)
+
+> **This is a community fork of the original `vorp_stores` resource, created for everyone who uses VORP.**  
+> I decided to share this version for free with the community because it makes store management **3x easier**.
+
+### 🔑 Key changes:
+- All items are now defined in **one single file**: `stores.lua`.  
+- Direct integration with the **database** for flexibility.  
+- Extra **safety checks** added for stability.  
+
+With these changes, configuring or customizing any store becomes much faster and simpler.  
+
+👉 If you prefer the **official version**, use `vorp_stores` from official author - https://github.com/VORPCORE/vorp_stores.  
+👉 If you want a more **customizable & user-friendly version**, use **`vorp_stores V2`**.
+
+
 # VORP Stores (LUA)
 
 VORP Stores in LUA (It is not a conversion from C#. Made completely from scratch)
