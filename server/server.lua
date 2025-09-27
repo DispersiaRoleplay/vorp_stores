@@ -427,6 +427,29 @@ local function ValidateStoreImages(stores)
 end
 
 -- ===========================
+-- ======== Discord ==========
+-- ===========================
+local function DiscordLog(message)
+    if Config.UseWebhook ~= true then return end
+    local WebhookUrl = Config.WebhookUrl or ""
+    if WebhookUrl == "" then
+        -- print("^3[WARN]^7 Discord webhook is enabled but Config.WebhookUrl is empty")
+        return
+    end
+
+    Core.AddWebhook(
+        Config.WebhookLanguage.WebhookTitle,
+        WebhookUrl,
+        message,
+        Config.WebhookLanguage.WebhookColor,
+        Config.WebhookLanguage.WebhookName,
+        Config.WebhookLanguage.WebhookLogo,
+        Config.WebhookLanguage.WebhookLogo2,
+        Config.WebhookLanguage.WebhookAvatar
+    )
+end
+
+-- ===========================
 -- STORE ITEM SELL/BUY LIMITS
 -- ===========================
 local function RebuildStoreLimits()
@@ -632,29 +655,6 @@ local function buyItems(_source, Character, value, ItemName, storeId)
             end
         end
     end
-end
-
--- ===========================
--- ======== Discord ==========
--- ===========================
-local function DiscordLog(message)
-    if Config.UseWebhook ~= true then return end
-    local WebhookUrl = Config.WebhookUrl or ""
-    if WebhookUrl == "" then
-        -- print("^3[WARN]^7 Discord webhook is enabled but Config.WebhookUrl is empty")
-        return
-    end
-
-    Core.AddWebhook(
-        Config.WebhookLanguage.WebhookTitle,
-        WebhookUrl,
-        message,
-        Config.WebhookLanguage.WebhookColor,
-        Config.WebhookLanguage.WebhookName,
-        Config.WebhookLanguage.WebhookLogo,
-        Config.WebhookLanguage.WebhookLogo2,
-        Config.WebhookLanguage.WebhookAvatar
-    )
 end
 
 -- ===========================
@@ -873,4 +873,5 @@ AddEventHandler('playerDropped', function(reason)
             storesInUse[k] = nil
         end
     end
+
 end)
