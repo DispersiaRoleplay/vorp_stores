@@ -3,15 +3,44 @@
 > **This is a community fork of the original `vorp_stores` resource, created for everyone who uses VORP.**  
 > I decided to share this version for free with the community because it makes store management **3x easier**.
 
-### 🔑 Key changes:
+---
+
+## 📦 What is vorp_stores V2?
+
+`vorp_stores V2` is a **complete refactor** of the original `vorp_stores`, designed to make store management easier, faster, and cleaner.
+
+With this version, all store logic, items, and validation are centralized in one place, drastically simplifying configuration and maintenance.
+
+---
+
+## 🔑 Key changes
 - All items are now defined in **one single file**: `stores.lua`.  
 - Direct integration with the **database** for flexibility.  
 - Extra **safety checks** added for stability.  
 
-With these changes, configuring or customizing any store becomes much faster and simpler.  
+---
 
-👉 If you prefer the **official version**, use `vorp_stores` from official author - https://github.com/VORPCORE/vorp_stores.  
-👉 If you want a more **customizable & user-friendly version**, use **`vorp_stores V2`**.
+## ✨ Main improvements
+- Centralized **store/item data** in `stores.lua + database` (no more 3 separate files).  
+- Automatic validation for **items, prices, ammo, icons**, and missing DB entries.  
+- **Cleaner buy/sell menus** with categories, sliders, and dynamic pricing.  
+- **Improved prompts & NPC/Blip handling**, with store hour restrictions.  
+- **Unified logging system** with `[INFO] [WARN] [ERROR]` outputs.  
+- Configs simplified: `config.lua` only contains script settings, while items/stores live in `stores.lua`.  
+- File size reduced drastically (**~15,000 lines → ~1,500 lines**).  
+
+---
+
+## ✅ Result
+- Adding or editing stores/items now takes **minutes instead of hours**.  
+- Future maintenance is **simpler, less redundant, and more reliable**.  
+
+---
+
+👉 If you prefer the **official version**, use `vorp_stores` from the original author:  
+https://github.com/VORPCORE/vorp_stores  
+
+👉 If you want a more **customizable & user-friendly version**, use **`vorp_stores V2`**.  
 
 
 # VORP Stores (LUA)
